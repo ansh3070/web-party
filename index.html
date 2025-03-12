@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Movie Night</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="floating-hearts"></div>
+        
+        <h1 class="hide-in-fullscreen">💖 Movie Night Together 💖</h1>
+        
+        <div class="video-container">
+            <video id="videoPlayer" controls>
+                <source src="/movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-controls">
+                <button id="fullscreenBtn" class="control-btn"><i class="fas fa-expand"></i></button>
+                <button id="heartBtn" class="control-btn"><i class="fas fa-heart"></i></button>
+                <button id="chatToggleBtn" class="control-btn"><i class="fas fa-comments"></i></button>
+            </div>
+        </div>
+        
+        <div class="status-indicator hide-in-fullscreen">
+            <span id="watchingStatus">Paused - Take a moment to chat ✨</span>
+        </div>
+        
+        <div id="heartBurst" class="heart-burst"></div>
+        
+        <div id="tempMessageDisplay" class="temp-message-display"></div>
+    </div>
+    
+    <div id="chatPanel" class="chat-panel">
+        <div class="chat-header">
+            <h2>Chat</h2>
+            <button id="backBtn" class="back-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="chatBox" class="chat-box">
+            <p class="empty-chat">Share your thoughts about the movie...</p>
+        </div>
+        <div class="chat-input-wrapper">
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button id="emojiToggleBtn" class="emoji-toggle-btn"><i class="far fa-smile"></i></button>
+                <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <div id="emojiPicker" class="emoji-picker">
+                <!-- Emojis will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-auth-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
